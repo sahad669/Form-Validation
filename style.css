@@ -1,0 +1,13 @@
+
+body{
+    background-color: #84abd3b0;
+}
+form{
+    background: black;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,1.4);
+    padding: 20px;
+}
+label{
+    color: aliceblue;
+}
