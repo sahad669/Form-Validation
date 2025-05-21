@@ -88,8 +88,7 @@ form.addEventListener('submit', (e) => {
         const confirmBtn = document.getElementById("btn");
 
         confirmBtn.addEventListener("click", () => {
-            display.innerText="Form Validation"
-            form.innerHTML = displayForm;
+            location.reload()
         });
     }
 });
