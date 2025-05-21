@@ -46,7 +46,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     let formValid = true;
 
-    if (fullName.value.trim() === "") {
+    if (fullName.value.trim() === ""||nameRegex.test(fullName.value.trim()) ) {
         nameAlert.innerText = "Fill this area";
         nameAlert.style.color = "red";
         formValid = false;
