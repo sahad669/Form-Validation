@@ -15,6 +15,17 @@ let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 let passwordRegex = /^.{8,}$/;
 let nameRegex = /^[A-Za-z\s]+$/;
 
+
+fullName.addEventListener('input',()=>{
+      if (fullName.value.trim() === ""|| !nameRegex.test(fullName.value.trim()) ) {
+        nameAlert.innerText = "Please enter a valid name ";
+        nameAlert.style.color = "red";
+    } else {
+        nameAlert.innerText = "";
+    }
+
+})
+
 email.addEventListener('input', () => {
     if (!emailRegex.test(email.value)) {
         emailAlert.innerText = "Enter a valid email address";
@@ -46,8 +57,8 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     let formValid = true;
 
-    if (fullName.value.trim() === ""||nameRegex.test(fullName.value.trim()) ) {
-        nameAlert.innerText = "Fill this area";
+    if (fullName.value.trim() === ""|| !nameRegex.test(fullName.value.trim()) ) {
+        nameAlert.innerText = "Please enter a valid name ";
         nameAlert.style.color = "red";
         formValid = false;
     } else {
